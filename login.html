@@ -1,12 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>注册/登陆</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/lib/layui/css/layui.css">
+    <link rel="stylesheet" href="assets/lib/bootstrap.css">
+
 </head>
+
 <body>
-    
+   
+    <div class="layui-main">
+        <!-- 头部头标 -->
+        <div>
+            <img src="assets/images/logo.png" alt="">
+        </div>
+        <div class="log-box">
+            <div class="log-head"></div>
+            <form class="layui-form" id="formcont-log">
+                <div class="log-page">
+                    <div class="layui-form-item">
+                        <!-- 输入名字 -->
+                        <i class="layui-icon layui-icon-username"></i>
+                        <input type="text" name="username" placeholder="请输入名字" autocomplete="off" class="layui-input"
+                            lay-verify="required">
+                    </div>
+                    <div class="layui-form-item">
+                        <!-- 输入密码 -->
+                        <i class="layui-icon layui-icon-password"></i>
+                        <span class="glyphicon glyphicon-eye-close" id="eyeclose"></span>
+                        <span class="glyphicon glyphicon-eye-open" id="eyeopen"></span>
+                        <input type="password" name="password" placeholder="请输入密码" autocomplete="off"
+                            class="layui-input" id="password-text" lay-verify="required|pass">
+                    </div>
+                    <!-- 登陆按钮 -->
+                    <div class="layui-form-item">
+                        <button type="submit" class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>登陆</button>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:;" id="reg">去注册</a>
+                    </div>
+                </div>
+
+            </form>
+            <form class="layui-form" id="formcont-reg">
+                <div class="reg-page">
+                    <div class="layui-form-item">
+                        <!-- 请输入名字 -->
+                        <i class="layui-icon layui-icon-username"></i>
+                        <!-- 表单验证lay-verify  -->
+                        <input type="text" name="username" placeholder="请输入名字" autocomplete="off"
+                            class="layui-input reglog" lay-verify="required">
+                    </div>
+                    <div class="layui-form-item">
+                        <!-- 输入密码 -->
+                        <i class="layui-icon layui-icon-password"></i>
+
+                        <span class="glyphicon glyphicon-eye-close" id="eyeclose"></span>
+                        <span class="glyphicon glyphicon-eye-open" id="eyeopen"></span>
+                        <input type="password" name="password" placeholder="请输入密码" autocomplete="off"
+                            class="layui-input" id="password-text" lay-verify="required|pass">
+                    </div>
+                    <div class="layui-form-item">
+                        <!-- 再输入密码 -->
+                        <i class="layui-icon layui-icon-password"></i>
+
+                        <span class="glyphicon glyphicon-eye-close" id="eyeclose"></span>
+                        <span class="glyphicon glyphicon-eye-open" id="eyeopen"></span>
+
+                        <input type="password" name="repassword" placeholder="再次确认密码" autocomplete="off"
+                            class="layui-input regmi" id="password-text" lay-verify="required|pass|repwd">
+                    </div>
+                    <!-- 登陆按钮 -->
+                    <div class="layui-form-item">
+                        <button type="submit" class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit>注册</button>
+                    </div>
+                    <div class="right">
+                        <a href="javascript:;" id="log">去登陆</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 引入layui的js，目的是帮助表单验证 -->
+    <script src="assets/lib/layui/layui.all.js"></script>
+    <script src="assets/lib/jquery.js"></script>
+    <script src="assets/js/myajax.js"></script>
+    <script src="assets/js/log.js"></script>
 </body>
+
 </html>
